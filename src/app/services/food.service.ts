@@ -8,7 +8,7 @@ import { Food } from '../models/food';
 })
 export class FoodService {
    
-  private baseurl="";
+  private baseurl="https://sheetdb.io/api/v1/jkd3yew5mg2us";
   constructor(private http:HttpClient) { }
   onsubmit():Observable<Food[]>{
   return  this.http.get<Food[]>(this.baseurl);

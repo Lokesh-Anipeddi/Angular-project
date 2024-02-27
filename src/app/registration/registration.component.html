@@ -1,0 +1,25 @@
+<form (ngSubmit)='submit()'[formGroup]="login">
+    <input type="text" name="Username"[(ngModel)]="student.Username"formControlName="Username"><br>
+    <small *ngIf="login.get('Username')?.hasError('required')&&login.get('Username')?.touched">Username Required!</small>
+    <small *ngIf="login.get('Username')?.hasError('maxLength')&&login.get('Username')?.touched">Username is too big!</small>
+    <small *ngIf="login.get('Username')?.hasError('minLength')&&login.get('Username')?.touched">Username is too small!</small>
+    <input type="text" name="firstname"[(ngModel)]="student.firstname"formControlName="firstname"><br>
+    <small *ngIf="login.get('firstname')?.hasError('required')&&login.get('firstname')?.touched">firstname Required!</small>
+    <small *ngIf="login.get('firstname')?.hasError('maxLength')&&login.get('firstname')?.touched">firstname is too big!</small>
+    <small *ngIf="login.get('firstname')?.hasError('minLength')&&login.get('firstname')?.touched">firstname is too small!</small>
+    <input type="text" name="lastname"[(ngModel)]="student.lastname"formControlName="lastname"><br>
+    <small *ngIf="login.get('lastname')?.hasError('required')&&login.get('lastname')?.touched">lastname Required!</small>
+    <small *ngIf="login.get('lastname')?.hasError('maxLength')&&login.get('lastname')?.touched">lastname is too big!</small>
+    <small *ngIf="login.get('lastname')?.hasError('minLength')&&login.get('lastname')?.touched">lastname is too small!</small>
+    <input type="email" name="email"[(ngModel)]="student.email"formControlName="email"><br>
+    <small *ngIf="login.get('email')?.hasError('required')&&login.get('email')?.touched">email Required!</small>
+    <small *ngIf="login.get('email')?.hasError('maxLength')&&login.get('email')?.touched">email is too big!</small>
+    <small *ngIf="login.get('email')?.hasError('minLength')&&login.get('email')?.touched">email is too small!</small>
+    <small *ngIf="login.get('email')?.hasError('pattern')&&login.get('email')?.touched">email is in wrong pattern!</small>
+    <input type="password" name="password"[(ngModel)]="student.password"formControlName="password"><br>
+    <small *ngIf="login.get('password')?.hasError('required')&&login.get('password')?.touched">password Required!</small>
+    <small *ngIf="login.get('password')?.hasError('maxLength')&&login.get('password')?.touched">password Required!</small>
+    <small *ngIf="login.get('password')?.hasError('minLength')&&login.get('password')?.touched">password Required!</small>
+    <small *ngIf="login.get('password')?.hasError('pattern')&&login.get('password')?.touched">password Required!</small>
+    <button type="submit">Submit</button>
+</form>
